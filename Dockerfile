@@ -1,9 +1,9 @@
-FROM eclipse-temurin:8u412-b08-jre
+FROM eclipse-temurin:21.0.3_9-jre
 
 # アプリケーションのインストール
 RUN mkdir /app
 WORKDIR /app
-COPY --chown=65534:65534 target/rest-service-0.0.1.jar /app/rest-service.jar
+COPY --chown=65534:65534 target/rest-service-1.0.0.jar /app/rest-service.jar
 
 # コンテナの設定
 USER 65534:65534
