@@ -1,4 +1,4 @@
-FROM eclipse-temurin:latest
+FROM eclipse-temurin:8u412-b08-jre
 
 # アプリケーションのインストール
 RUN mkdir /app
@@ -9,3 +9,4 @@ COPY --chown=65534:65534 target/rest-service-0.0.1.jar /app/rest-service.jar
 USER 65534:65534
 EXPOSE 8080
 CMD ["java", "-jar", "/app/rest-service.jar"]
+
