@@ -57,7 +57,7 @@ jobs:
       - name: Test the container
         run: |
           sleep 10
-          curl --silent --retry 3 --include  http://127.0.0.1:9500/ping | grep "200 OK" 
+          curl --silent --retry 3 --include  http://127.0.0.1:9500/ping | grep "HTTP/1.1 200" 
           [ $? -ne 0 ] && (echo "error"; exit 1)
           exit 0
 
